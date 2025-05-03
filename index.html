@@ -3,10 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Periodic Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(18, 1fr);
+            gap: 10px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .element {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .element:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .element .number {
+            font-size: 0.8em;
+            color: #666;
+        }
+        .element .symbol {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .element .name {
+            font-size: 0.9em;
+            color: #555;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my first HTML page.</p>
+    <h1 style="text-align: center; padding: 20px 0;">Periodic Table</h1>
+    <div class="container">
+        <div class="element" style="grid-column: 1;">
+            <div class="number">1</div>
+            <div class="symbol">H</div>
+            <div class="name">Hydrogen</div>
+        </div>
+        <div class="element" style="grid-column: 18;">
+            <div class="number">2</div>
+            <div class="symbol">He</div>
+            <div class="name">Helium</div>
+        </div>
+        <div class="element" style="grid-column: 1;">
+            <div class="number">3</div>
+            <div class="symbol">Li</div>
+            <div class="name">Lithium</div>
+        </div>
+        <div class="element" style="grid-column: 2;">
+            <div class="number">4</div>
+            <div class="symbol">Be</div>
+            <div class="name">Beryllium</div>
+        </div>
+        <div class="element" style="grid-column: 13;">
+            <div class="number">5</div>
+            <div class="symbol">B</div>
+            <div class="name">Boron</div>
+        </div>
+        <div class="element" style="grid-column: 14;">
+            <div class="number">6</div>
+            <div class="symbol">C</div>
+            <div class="name">Carbon</div>
+        </div>
+        <div class="element" style="grid-column: 15;">
+            <div class="number">7</div>
+            <div class="symbol">N</div>
+            <div class="name">Nitrogen</div>
+        </div>
+        <div class="element" style="grid-column: 16;">
+            <div class="number">8</div>
+            <div class="symbol">O</div>
+            <div class="name">Oxygen</div>
+        </div>
+        <div class="element" style="grid-column: 17;">
+            <div class="number">9</div>
+            <div class="symbol">F</div>
+            <div class="name">Fluorine</div>
+        </div>
+        <div class="element" style="grid-column: 18;">
+            <div class="number">10</div>
+            <div class="symbol">Ne</div>
+            <div class="name">Neon</div>
+        </div>
+        <!-- Add more elements as needed -->
+    </div>
 </body>
 </html>
